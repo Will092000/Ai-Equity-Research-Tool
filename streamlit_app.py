@@ -59,14 +59,14 @@ peer_cols = st.columns(int(num_peers))
 for i, col in enumerate(peer_cols):
     with col:
         st.markdown(f"**Peer {i + 1}**")
-        p_ticker = st.text_input(f"Ticker##{i}", value=f"PEER{i + 1}", key=f"pt{i}")
-        p_price = st.number_input(f"Price ($)##{i}", value=90.0, min_value=0.0, key=f"pp{i}")
-        p_shares = st.number_input(f"Shares (M)##{i}", value=500.0, min_value=0.0, key=f"ps{i}")
-        p_debt = st.number_input(f"Debt ($M)##{i}", value=1500.0, min_value=0.0, key=f"pd{i}")
-        p_cash = st.number_input(f"Cash ($M)##{i}", value=400.0, min_value=0.0, key=f"pc{i}")
-        p_rev = st.number_input(f"Revenue ($M)##{i}", value=7000.0, min_value=0.0, key=f"pr{i}")
-        p_ebitda = st.number_input(f"EBITDA ($M)##{i}", value=1400.0, min_value=0.0, key=f"pe{i}")
-        p_ni = st.number_input(f"Net income ($M)##{i}", value=750.0, min_value=0.0, key=f"pn{i}")
+        p_ticker = st.text_input("Ticker", value=f"PEER{i + 1}", key=f"pt{i}")
+        p_price = st.number_input("Price ($)", value=90.0, min_value=0.0, key=f"pp{i}")
+        p_shares = st.number_input("Shares (M)", value=500.0, min_value=0.0, key=f"ps{i}")
+        p_debt = st.number_input("Debt ($M)", value=1500.0, min_value=0.0, key=f"pd{i}")
+        p_cash = st.number_input("Cash ($M)", value=400.0, min_value=0.0, key=f"pc{i}")
+        p_rev = st.number_input("Revenue ($M)", value=7000.0, min_value=0.0, key=f"pr{i}")
+        p_ebitda = st.number_input("EBITDA ($M)", value=1400.0, min_value=0.0, key=f"pe{i}")
+        p_ni = st.number_input("Net income ($M)", value=750.0, min_value=0.0, key=f"pn{i}")
         peers.append(
             CompanySnapshot(
                 ticker=p_ticker, share_price=p_price, shares_outstanding=p_shares,
